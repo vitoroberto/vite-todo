@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply grid justify-center;
+  @apply bg-[#1a1a1a];
+  @apply overflow-x-hidden;
+}
