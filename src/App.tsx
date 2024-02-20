@@ -1,8 +1,8 @@
-// TODO: finish component that shows when there are no tasks
-// TODO: change font
-
 import { useEffect, useState } from "react";
 import Rocket from "./components/Rocket";
+import Clipboard from "./components/Clipboard";
+import Vector from "./components/Vector";
+import Trash from "./components/Trash";
 
 type TodoTask = {
   id: number;
@@ -114,7 +114,9 @@ function App() {
         <div className="grid gap-3 pb-4">
           {tasks.length === 0 ? (
             <div className="flex flex-col items-center border-t-2 border-[#333] text-white">
-              <div className="mt-16 h-[56px] w-[56px]">icon</div>
+              <div className="mb-5 mt-16 h-[56px] w-[56px]">
+                <Clipboard />
+              </div>
               <div className="text-base text-[#808080]">
                 <p className="font-bold">
                   Você ainda não tem tarefas cadastradas
@@ -134,24 +136,24 @@ function App() {
                   className="col-span-5 mr-2 flex cursor-pointer items-center"
                   onClick={() => toggleCompleted(task.id)}
                 >
-                  <div className="mx-4">
+                  <div className="mx-2">
                     {task.completed ? (
-                      <span className="inline-block h-6 w-6 rounded-[50%] border-2 border-[#5E60CE] bg-[#5E60CE] text-center">
-                        a
+                      <span className="inline-block h-6 w-6 rounded-[50%] border-2 border-[#5E60CE] bg-[#5E60CE]">
+                        <Vector />
                       </span>
                     ) : (
                       <span className="inline-block h-6 w-6 rounded-[50%] border-2 border-[#4EA8DE]"></span>
                     )}
                   </div>
-                  <div className="max-w-[200px] break-words text-left sm:max-w-full">
+                  <div className="max-w-[200px] break-words py-5 text-left sm:max-w-full">
                     <p>{task.text}</p>
                   </div>
                 </div>
                 <button
-                  className="rounded transition duration-300 hover:bg-red-500"
+                  className="flex items-center justify-center border-l-2 border-[#333]"
                   onClick={() => deleteTodoTask(task.id)}
                 >
-                  delete
+                  <Trash />
                 </button>
               </div>
             ))
