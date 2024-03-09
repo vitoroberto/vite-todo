@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import Rocket from "./components/Rocket";
-import Clipboard from "./components/Clipboard";
-import Vector from "./components/Vector";
-import Trash from "./components/Trash";
+import Rocket from "./icons/Rocket";
+import Clipboard from "./icons/Clipboard";
+import Vector from "./icons/Vector";
+import Trash from "./icons/Trash";
 
 type TodoTask = {
   id: number;
