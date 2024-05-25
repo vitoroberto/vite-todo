@@ -1,30 +1,41 @@
-# React + TypeScript + Vite
+<h1 align="center">
+  Vite Todo
+</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h4 align="center">
+  A todo website made with React + Vite + localStorage to list, complete and delete your tasks.
+</h4>
 
-Currently, two official plugins are available:
+<p align="center">
+  <a href="#technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#how-to-use">How To Use</a>
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![website screenshot](./public/readme-site-image.png)
 
-## Expanding the ESLint configuration
+## Technologies
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+This project was developed with the following technologies:
 
-- Configure the top-level `parserOptions` property like this:
+- [TypeScript](https://www.typescriptlang.org/)
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+## How to use
+
+To clone and run this application, you'll need [Git](https://git-scm.com), [Node.js v18.12.1](https://nodejs.org/en/) or higher + [pnpm v8.15.3](https://pnpm.io/) or higher installed on your computer. From your command line:
+
+```bash
+# Clone this repository
+$ git clone https://github.com/vitoroberto/vite-todo.git
+# Go into the repository
+$ cd vite-todo
+# Install dependencies
+$ pnpm install
+# Run the app
+$ pnpm dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+design made by [Matheus Susko](https://www.figma.com/community/file/1175262836322989600/todo-list).
